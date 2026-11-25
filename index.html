@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chicago Driver Store — Dummy Store</title>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<header>
+  <h1>Chicago Driver Store</h1>
+  <p>Dummy store — no real products, no real payments.</p>
+  <nav>
+    <a href="index.html">Shop</a>
+    <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+    <a href="checkout.html">Checkout</a>
+  </nav>
+</header>
+<main>
+  <section class="filters">
+    <label>Category:
+      <select id="category-filter">
+        <option value="all">All</option>
+        <option value="Safety">Safety</option>
+        <option value="Accessories">Accessories</option>
+        <option value="Interior">Interior</option>
+      </select>
+    </label>
+    <label>Search: <input type="search" id="search" placeholder="Search products..."></label>
+  </section>
+  <section id="products" class="products"></section>
+</main>
+<footer><p>Dummy store for demo only. Contact: chicago.uberdrivers@gmail.com</p></footer>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
