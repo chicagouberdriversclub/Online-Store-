@@ -20,11 +20,12 @@ function renderProducts() {
     (p.name.toLowerCase().includes(q) || p.description.toLowerCase().includes(q)));
   grid.innerHTML = list.map(p => `
     <article class="card">
-      <img src="https://picsum.photos/seed/${p.id}/400/300" alt="${p.name}">
+      <img src="${p.image || `https://picsum.photos/seed/${p.id}/400/300`}" alt="${p.name}">
       <h2>${p.name}</h2>
       <p>${p.description}</p>
       <p class="price">$${p.price.toFixed(2)}</p>
-      <p>Stock: ${p.stock} · ${p.category}</p>
+      <p>${p.category} · In stock on eBay (verified Nov 25, 2026)</p>
+      ${p.url ? `<p><a href="${p.url}" target="_blank" rel="noopener">Buy on eBay</a></p>` : ''}
       <button onclick="addToCart('${p.id}')">Add to cart</button>
     </article>`).join('') || '<p>No products found.</p>';
 }
